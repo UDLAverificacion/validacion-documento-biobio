@@ -82,15 +82,10 @@
                       Habilitado para estudiantes en posesión of un título o grado... (etc)
                     </div>
                     
-                    <form id="login-form" onsubmit="validarLogin(); return false;">
+                    <form id="login-form">
+                      
                       <div class="form-group">
-                        <input type="text" name="rut_aux" class="form-control" id="rut_login" placeholder="Ingrese su R.U.T" translate="no">
-                      </div>
-                      <div class="form-group field-loginform-password required">
-                        <input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" value="" placeholder="Ingrese su Clave" aria-required="true">
-                      </div>
-                      <div class="form-group">
-                        <button type="button" class="btn btn-warning btn-block" name="login-button" onclick="validarLogin()">Ingresar</button>
+                        <button type="button" class="btn btn-warning btn-block" name="login-button" onclick="window.location.href='validacion.html'">Ingresar</button>
                       </div>
                       <div class="row mb-3">
                         <div class="col-12" style="text-align: right;">
@@ -142,25 +137,5 @@
   <script src="https://certificados.ubiobio.cl/certificadosubb/js/jquery-ui.min.js"></script>
   <script src="https://certificados.ubiobio.cl/certificadosubb/js/bootstrap-notify.min.js"></script>
 
-  <script>
-    function validarLogin() {
-      // 1. Definir los datos correctos
-      var rutCorrecto = "";
-      var passCorrecta = "";
-
-      // 2. Obtener los valores de los inputs
-      var rutIngresado = document.getElementById('rut_login').value;
-      var passIngresada = document.getElementById('loginform-password').value;
-
-      // 3. Comparar los valores
-      if (rutIngresado === rutCorrecto && passIngresada === passCorrecta) {
-        // Si son correctos, redirigir a la página de validación
-        window.location.href = 'validacion.html';
-      } else {
-        // Si son incorrectos, mostrar una alerta
-        alert('RUT o Contraseña Incorrectos.');
-      }
-    }
-  </script>
-</body>
+  </body>
 </html>
