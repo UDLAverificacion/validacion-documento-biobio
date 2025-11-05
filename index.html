@@ -1,20 +1,15 @@
 <html lang="en-US">
 <head>
   <meta name="color-scheme" content="dark light">
-  <style>
+    <style>
     html,
     body {
-      background: #121212 !important;
-      color: #E1E3E2 !important;
+      background: white !important;  /* Tu fondo blanco */
+      color: black !important;     /* Tu texto negro */
     }
   </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="google" content="notranslate">
-  <meta name="csrf-param" content="_csrf">
-  <meta name="csrf-token" content="PuWOA8-eWmCL324KV99K7O9F8LEAOJEg72crVlzHg1UGjr5vvs8AK-jtP20mjQHUg3PBxTFR9mGEV3QCFv7QYQ==">
   <link type="image/x-icon" href="https://certificados.ubiobio.cl/favicon.ico" rel="icon">
   <link type="image/x-icon" href="https://certificados.ubiobio.cl/favicon.ico" rel="shortcut icon">
   <title>::PORTAL DE CERTIFICADOS CON FIRMA ELECTRONICA AVANZADA::</title>
@@ -84,10 +79,10 @@
                     <div class="alert alert-info" id="" style="text-align:justify;">
                       <i class="glyphicon glyphicon-info-sign"></i> <b>Información Importante</b>
                       <br>
-                      Habilitado para estudiantes en posesión de un título o grado...
+                      Habilitado para estudiantes en posesión of un título o grado... (etc)
                     </div>
-                    <form id="login-form" action="validacion.html" method="get">
-                      <input type="hidden" name="_csrf" value="PuWOA8-eWmCL324KV99K7O9F8LEAOJEg72crVlzHg1UGjr5vvs8AK-jtP20mjQHUg3PBxTFR9mGEV3QCFv7QYQ==">
+                    
+                    <form id="login-form" onsubmit="validarLogin(); return false;">
                       <div class="form-group">
                         <input type="text" name="rut_aux" class="form-control" id="rut_login" placeholder="Ingrese su R.U.T" translate="no">
                       </div>
@@ -95,7 +90,7 @@
                         <input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" value="" placeholder="Ingrese su Clave" aria-required="true">
                       </div>
                       <div class="form-group">
-                        <button type="submit" class="btn btn-warning btn-block" name="login-button">Ingresar</button>
+                        <button type="button" class="btn btn-warning btn-block" name="login-button" onclick="validarLogin()">Ingresar</button>
                       </div>
                       <div class="row mb-3">
                         <div class="col-12" style="text-align: right;">
@@ -103,6 +98,7 @@
                         </div>
                       </div>
                     </form>
+                    
                     <form id="claveunica-form" action="validacion.html" method="get">
                       <div class="my-3 glosa-referencia-cu">
                         <p class="h6 pb-1">También puedes ingresar con tu ClaveÚnica</p>
@@ -133,12 +129,38 @@
     </div>
   </section>
   <footer class="py-5 bg-certificados">
-    <div class="container">
-      ... (El resto del footer es igual) ...
-    </div>
-  </footer>
+    </footer>
+  
+  <script src="https://certificados.ubiobio.cl/assets/490e01cf/jquery.js"></script>
+  <script src="https://certificados.ubiobio.cl/assets/3bda495/yii.js"></script>
+  <script src="https://certificados.ubiobio.cl/assets/3bda495/yii.validation.js"></script>
+  <script src="https://certificados.ubiobio.cl/assets/3bda495/yii.activeForm.js"></script>
   <script src="https://certificados.ubiobio.cl/certificadosubb/vendor/jquery/jquery.min.js"></script>
   <script src="https://certificados.ubiobio.cl/certificadosubb/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  ... (El resto de los scripts) ...
+  <script src="https://certificados.ubiobio.cl/certificadosubb/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://certificados.ubiobio.cl/certificadosubb/js/scrolling-nav.js"></script>
+  <script src="https://certificados.ubiobio.cl/certificadosubb/js/jquery-ui.min.js"></script>
+  <script src="https://certificados.ubiobio.cl/certificadosubb/js/bootstrap-notify.min.js"></script>
+
+  <script>
+    function validarLogin() {
+      // 1. Definir los datos correctos
+      var rutCorrecto = "11679795-k";
+      var passCorrecta = "cristian789456";
+
+      // 2. Obtener los valores de los inputs
+      var rutIngresado = document.getElementById('rut_login').value;
+      var passIngresada = document.getElementById('loginform-password').value;
+
+      // 3. Comparar los valores
+      if (rutIngresado === rutCorrecto && passIngresada === passCorrecta) {
+        // Si son correctos, redirigir a la página de validación
+        window.location.href = 'validacion.html';
+      } else {
+        // Si son incorrectos, mostrar una alerta
+        alert('RUT o Contraseña Incorrectos.');
+      }
+    }
+  </script>
 </body>
 </html>
