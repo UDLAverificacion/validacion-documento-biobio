@@ -1,20 +1,53 @@
 <html lang="en-US">
 <head>
   <meta name="color-scheme" content="dark light">
-  <style>
+    <style>
     html,
     body {
-      background: #121212 !important;
-      color: #E1E3E2 !important;
+      background: white !important;  /* O puedes usar #FFFFFF */
+      color: black !important;     /* O puedes usar #000000 */
     }
   </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="google" content="notranslate">
+  <meta name="csrf-param" content="_csrf">
+  <meta name="csrf-token" content="S0OvT6e4D_A7ymCxwYSNjwW2vuAS-I9Oo1WQJZQuD5sDJvAt3fU7hWivCcu7s_XrUPT2kT_V6QPAZKATxm1d1A==">
   <link type="image/x-icon" href="https://certificados.ubiobio.cl/favicon.ico" rel="icon">
+  <link type="image/x-icon" href="https://certificados.ubiobio.cl/favicon.ico" rel="shortcut icon">
   <title>::PORTAL DE CERTIFICADOS CON FIRMA ELECTRONICA AVANZADA::</title>
+  <style>
+    @keyframes spinner-border {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spinner-border {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      vertical-align: text-bottom;
+      border: .25em solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      -webkit-animation: spinner-border .75s linear infinite;
+      animation: spinner-border .75s linear infinite;
+    }
+
+    .spinner-border-sm {
+      width: 1rem;
+      height: 1rem;
+      border-width: .2em;
+    }
+  </style>
   <link href="https://certificados.ubiobio.cl/certificadosubb/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://certificados.ubiobio.cl/certificadosubb/css/scrolling-nav.css" rel="stylesheet">
+  <link href="https://certificados.ubiobio.cl/certificadosubb/css/jquery-ui.min.css" rel="stylesheet">
   <link href="https://certificados.ubiobio.cl/css/cu.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
 </head>
 <body id="page-top">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
@@ -49,7 +82,7 @@
               <div class="alert alert-success">
                 El documento: <i>Certificado de Título Pregrado</i> es <b>VÁLIDO</b>
               </div>
-              <iframe width="100%" height="800" src="data:application/pdf;base64,JVBERi0xLjQKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL01lZGlhQm94IFswIDAgNjEyLjAwIDc5Mi4wMF0KL1Jlc291cmNlcyAyIDAgUgovR3JvdXAgPDwvVHlwZSAvR3JvdXAgL1MgL1RyYW5zcGFyZW5jeSAvQ1MgL0RldmljZVJHQj4+Ci9Db250ZW50cyA0IDAgUj4+CmVuZG9iago0IDAgb2JqCjw8L0ZpbHRlciAvRmxhdGVEZWNvZGUgL0xlbmd0aCA5Mzk+PgpzdHJlYW0KeJyFVctu2zgU3ecrLrpqgQwrUtSrO42tFA5cp3WcLAYFBozEpApk0aFkdzJfNev5h35EP6CLIj8wh5Tj2AmKcQyHoMh7z7nnnitBp0cBixL6enRHMRcsCMj9Jdmw3P2US3o74TQ29Ono9wW9PeHE/YPFNRULt8V5zIQgEQQs5bSo6PXooapvDF1qW1/XpSrrh/Yd8VRLrmWVlW9ocXt4lycp46G/e2Ka2rxDNMGDKAgCHojH83c4HrIw80C3Sx4kjEckRMSCZAArBrA4HYZMhP50iseSRIg0nGIpWbxlFu4xAw7+xAxnItD5ugczyiSLBphFS6Vpr41d1pWqSFGjyOqbRi1123vGtKlvsNbHtDKWxrq0ujd00dYbbbu6V7Y2j8Rc4Z6nSpA/HVL9hTCGZv8IAaaVbkgk+EfqytaNW7ha+f1O/0SquS57Y4+p1LZ39Td0t9Z4Rl/ULuGzZJFkqfTJHCnIVhlQqkz7+fVP9fnNnmBef3moP6DymCI00TbIaX45KeY5neazYkHzs/H82/uL4g8a5R8+np0fRDusecBk8qwQMs5YGviw84sZqkA8gzIhS0X2GyewXnxbXEzPaFzQZPa+mPnMo7MPxX... (código largo del PDF) ...CmVuZG9iag=="></iframe>
+              <iframe width="100%" height="800" src="ctitulo.pdf"></iframe>
             </div>
           </div>
         </div>
@@ -58,10 +91,28 @@
   </section>
   <footer class="py-5 bg-certificados">
     <div class="container">
-      ... (El resto del footer es igual) ...
+      <div class="row">
+        <div class="col-lg-6 texto-blanco">
+          <p>Para un correcto funcionamiento del sistema, por favor utilice uno de los siguientes navegadores: <strong>Google Chrome</strong> o <strong>Mozilla Firefox</strong>.</p>
+          <ul>
+            </ul>
+        </div>
+        <div class="col-lg-6 texto-blanco">
+          <div style="text-align:center;">
+            <img width="340px" height="94px" src="https://certificados.ubiobio.cl/certificadosubb/img/logo_acreditacion_2025.png">
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
+  <script src="https://certificados.ubiobio.cl/assets/490e01cf/jquery.js"></script>
+  <script src="https://certificados.ubiobio.cl/assets/3bda495/yii.js"></script>
   <script src="https://certificados.ubiobio.cl/certificadosubb/vendor/jquery/jquery.min.js"></script>
   <script src="https://certificados.ubiobio.cl/certificadosubb/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://certificados.ubiobio.cl/certificadosubb/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://certificados.ubiobio.cl/certificadosubb/js/scrolling-nav.js"></script>
+  <script src="https://certificados.ubiobio.cl/certificadosubb/js/jquery-ui.min.js"></script>
+  <script src="https://certificados.ubiobio.cl/certificadosubb/js/bootstrap-notify.min.js"></script>
+
 </body>
 </html>
